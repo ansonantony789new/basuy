@@ -12,13 +12,16 @@
 @layer base {
   :root {
     /* Core Brand Colors */
-    --trust-blue: 197 71% 45%; /* Sky Blue (Readable) */
-    --action-red: 225 73% 57%; /* Royal Blue */
+    --trust-blue: 197 71% 45%;
+    /* Sky Blue (Readable) */
+    --action-red: 225 73% 57%;
+    /* Royal Blue */
     --soft-blue: 197 100% 98%;
     --warm-white: 0 0% 100%;
-    --text-dark: 197 71% 35%; /* Deeper Sky Blue for text */
+    --text-dark: 197 71% 35%;
+    /* Deeper Sky Blue for text */
     --text-muted: 197 30% 55%;
-    
+
     /* Semantic Tokens */
     --background: 0 0% 100%;
     --foreground: 197 71% 35%;
@@ -38,7 +41,8 @@
     --muted: 197 30% 96%;
     --muted-foreground: 197 30% 55%;
 
-    --accent: 225 73% 57%; /* Royal Blue as accent */
+    --accent: 225 73% 57%;
+    /* Royal Blue as accent */
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
@@ -55,13 +59,13 @@
     --gradient-action: linear-gradient(135deg, hsl(225 73% 57%) 0%, hsl(225 73% 70%) 100%);
     --gradient-soft: linear-gradient(180deg, hsl(197 100% 98%) 0%, hsl(0 0% 100%) 100%);
     --gradient-hero: linear-gradient(135deg, hsl(197 71% 45% / 0.6) 0%, hsl(197 71% 30% / 0.5) 100%);
-    
+
     /* Shadows */
     --shadow-soft: 0 4px 20px -4px hsl(197 71% 45% / 0.12);
     --shadow-card: 0 8px 30px -8px hsl(197 71% 45% / 0.15);
     --shadow-button: 0 4px 14px -4px hsl(225 73% 57% / 0.4);
     --shadow-elevated: 0 20px 40px -15px hsl(197 71% 45% / 0.2);
-    
+
     /* Sidebar */
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 197 71% 35%;
@@ -101,7 +105,7 @@
     --border: 197 40% 20%;
     --input: 197 40% 20%;
     --ring: 197 71% 55%;
-    
+
     --sidebar-background: 197 40% 10%;
     --sidebar-foreground: 0 0% 95%;
     --sidebar-primary: 197 71% 55%;
@@ -126,7 +130,12 @@
     @apply bg-background text-foreground font-sans antialiased;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-display font-semibold tracking-tight text-foreground;
   }
 
@@ -136,27 +145,28 @@
 }
 
 @layer components {
+
   /* Hero Section Styles */
   .hero-overlay {
     background: var(--gradient-hero);
   }
-  
+
   /* Section Backgrounds */
   .section-soft {
     background: var(--gradient-soft);
   }
-  
+
   /* Card Hover Effects */
   .card-hover {
     @apply transition-all duration-300 ease-out;
     box-shadow: var(--shadow-soft);
   }
-  
+
   .card-hover:hover {
     box-shadow: var(--shadow-elevated);
     @apply -translate-y-1;
   }
-  
+
   /* Impact Number Animation */
   .impact-number {
     @apply text-5xl md:text-6xl font-display font-bold;
@@ -165,30 +175,30 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
-  
+
   /* Animated Underline */
   .animated-underline {
     @apply relative;
   }
-  
+
   .animated-underline::after {
     content: '';
     @apply absolute bottom-0 left-0 w-0 h-0.5 bg-accent transition-all duration-300;
   }
-  
+
   .animated-underline:hover::after {
     @apply w-full;
   }
-  
+
   /* Container Utilities */
   .container-narrow {
     @apply max-w-4xl mx-auto px-4 sm:px-6 lg:px-8;
   }
-  
+
   .container-wide {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
-  
+
   /* Text Gradient */
   .text-gradient-hope {
     background: var(--gradient-hope);
@@ -196,7 +206,7 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
-  
+
   .text-gradient-action {
     background: var(--gradient-action);
     -webkit-background-clip: text;
@@ -206,61 +216,83 @@
 }
 
 @layer utilities {
+
   /* Custom Animation Classes */
   .animate-fade-up {
     animation: fadeUp 0.6s ease-out forwards;
   }
-  
+
   .animate-fade-in {
     animation: fadeIn 0.5s ease-out forwards;
   }
-  
+
   .animate-scale-in {
     animation: scaleIn 0.4s ease-out forwards;
   }
-  
+
   .animate-float {
     animation: float 6s ease-in-out infinite;
   }
-  
+
   .animate-pulse-soft {
     animation: pulseSoft 3s ease-in-out infinite;
   }
-  
+
   @keyframes fadeUp {
     from {
       opacity: 0;
       transform: translateY(20px);
     }
+
     to {
       opacity: 1;
       transform: translateY(0);
     }
   }
-  
+
   @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
   }
-  
+
   @keyframes scaleIn {
     from {
       opacity: 0;
       transform: scale(0.95);
     }
+
     to {
       opacity: 1;
       transform: scale(1);
     }
   }
-  
+
   @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-10px);
+    }
   }
-  
+
   @keyframes pulseSoft {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.8; }
+
+    0%,
+    100% {
+      opacity: 1;
+    }
+
+    50% {
+      opacity: 0.8;
+    }
   }
 }

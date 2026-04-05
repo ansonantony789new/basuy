@@ -148,7 +148,7 @@ const About = () => {
           </div>
         </div>
       </section>
-      
+
       {/* Leadership */}
       <section className="py-16 md:py-24 section-soft">
         <div className="container-wide">
