@@ -18,8 +18,8 @@ const contactInfo = [
   {
     icon: Phone,
     title: 'Phone',
-    value: '+91 98765 43210',
-    link: 'tel:+919876543210',
+    value: '+91 78297 08090',
+    link: 'tel:+917829708090',
   },
   {
     icon: MapPin,
@@ -61,14 +61,14 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 1500));
-    
+
     setIsSubmitting(false);
     setIsSubmitted(true);
     toast.success('Thank you for your message! We\'ll get back to you soon.');
-    
+
     setFormData({
       name: '',
       email: '',
@@ -114,7 +114,7 @@ const Contact = () => {
               className="lg:col-span-1"
             >
               <h2 className="font-display text-2xl font-bold mb-8">Contact Information</h2>
-              
+
               <div className="space-y-6">
                 {contactInfo.map((item) => (
                   <div key={item.title} className="flex items-start gap-4">
@@ -191,7 +191,7 @@ const Contact = () => {
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <h3 className="font-display text-2xl font-bold mb-4 md:mb-6">Send Us a Message</h3>
-                  
+
                   <div className="grid md:grid-cols-2 gap-4 md:gap-6">
                     <div className="space-y-2">
                       <Label htmlFor="name">Full Name *</Label>
@@ -242,10 +242,10 @@ const Contact = () => {
                     />
                   </div>
 
-                  <Button 
-                    type="submit" 
-                    variant="donate" 
-                    size="xl" 
+                  <Button
+                    type="submit"
+                    variant="donate"
+                    size="xl"
                     className="w-full md:w-auto"
                     disabled={isSubmitting}
                   >
