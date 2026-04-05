@@ -4,10 +4,8 @@ import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Heart, Target, Eye, Sparkles } from 'lucide-react';
 
-import aboutImage from '@/assets/about-image.jpg';
-import leader1 from '@/assets/leader-1.jpg';
-import leader2 from '@/assets/leader-2.jpg';
-import leader3 from '@/assets/leader-3.jpg';
+import aboutImage from '@/assets/community.jpeg';
+// Leader photos are not required as per user instruction
 
 const values = [
   {
