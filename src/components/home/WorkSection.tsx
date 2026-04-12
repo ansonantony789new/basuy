@@ -11,27 +11,27 @@ import reliefImg from '@/assets/relief.jpeg';
 const initiatives = [
   {
     image: educationImg,
-    title: 'School Supplies Distribution',
-    description: 'Providing essential learning materials to 500+ underprivileged children across rural schools.',
+    title: 'Holi or Dol Purnima Celebration',
+    description: 'Holi or Dol Purnima Celebration with under privileged kids',
     date: 'January 2024',
   },
   {
     image: healthcareImg,
-    title: 'Free Medical Camp',
-    description: 'Organized health check-ups and free medicines for 1,200 community members.',
-    date: 'December 2023',
+    title: 'Beat the Heat in Bangalore 2025',
+    description: 'Beat the Heat in Bangalore 2025',
+    date: '2025',
   },
   {
     image: communityImg,
-    title: 'Village Development Project',
-    description: 'Built clean water facilities and sanitation infrastructure in 5 remote villages.',
+    title: 'Kumbh 2025',
+    description: 'Kumbh 2025',
     date: 'November 2023',
   },
   {
     image: reliefImg,
-    title: 'Flood Relief Distribution',
-    description: 'Emergency relief supplies delivered to 800+ families affected by monsoon floods.',
-    date: 'September 2023',
+    title: 'Holi or Dol Purnima Celebration',
+    description: 'Holi or Dol Purnima Celebration 2024 in government school',
+    date: 'September 2024',
   },
 ];
 
