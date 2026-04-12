@@ -70,14 +70,14 @@ const GetInvolved = () => {
 
     setPincodeError('');
     setIsSubmitting(true);
-    
+
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 1500));
-    
+
     setIsSubmitting(false);
     setIsSubmitted(true);
     toast.success('Thank you for signing up as a volunteer!');
-    
+
     setFormData({
       name: '',
       email: '',
@@ -154,7 +154,7 @@ const GetInvolved = () => {
                 </p>
                 {way.link && (
                   <Button variant="outline" asChild>
-                    <Link to={way.link}>Learn More</Link>
+                    <Link to={way.link}>Donate</Link>
                   </Button>
                 )}
               </motion.div>
@@ -182,7 +182,7 @@ const GetInvolved = () => {
               <p className="text-muted-foreground text-lg leading-relaxed mb-8">
                 Our volunteers are the heart of our organization. Whether you have a few hours a month or can commit to regular service, we have opportunities for you.
               </p>
-              
+
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
                   <CheckCircle className="w-6 h-6 text-primary shrink-0 mt-0.5" />
@@ -231,7 +231,7 @@ const GetInvolved = () => {
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <h3 className="font-display text-2xl font-bold mb-6">Volunteer Sign-Up</h3>
-                  
+
                   <div className="grid md:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <Label htmlFor="name">Full Name *</Label>
@@ -383,10 +383,10 @@ const GetInvolved = () => {
                     </AnimatePresence>
                   </div>
 
-                  <Button 
-                    type="submit" 
-                    variant="donate" 
-                    size="lg" 
+                  <Button
+                    type="submit"
+                    variant="donate"
+                    size="lg"
                     className="w-full"
                     disabled={isSubmitting}
                   >
